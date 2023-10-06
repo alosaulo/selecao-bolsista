@@ -4,11 +4,11 @@ using System.Diagnostics;
 
 namespace ctc_selecao_bolsista.Controllers
 {
-    public class HomeController : Controller
+    public class AlunoController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<AlunoController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public AlunoController(ILogger<AlunoController> logger)
         {
             _logger = logger;
         }
