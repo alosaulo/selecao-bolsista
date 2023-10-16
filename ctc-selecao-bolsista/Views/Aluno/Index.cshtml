@@ -3,6 +3,104 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Bem vindo!</h1>
+    <p>Utilize o menu de navegação acima para navegar pelas páginas.</p>
 </div>
+
+<div class="container mt-5">
+    <h1 class="text-center">Seleção de Bolsistas - Prova Prática</h1>
+
+    <section id="objetivo" class="mt-5">
+        <h2>1. Objetivo</h2>
+        <p>
+            Desenvolver um pequeno sistema para gerenciar alunos utilizando .NET Core no backend, HTML/CSS no frontend
+            e SQL Server como banco de dados com o Entity Framework Core como ORM.
+        </p>
+    </section>
+
+    <section id="especificacoes" class="mt-5">
+        <h2>2. Especificações:</h2>
+
+        <h3>2.1 Backend:</h3>
+        <p>Desenvolva uma aplicação web em .NET Core.</p>
+        <ul>
+            <li>Utilize Entity Framework Core como ORM para SQL Server.</li>
+            <li>Implemente um controlador AlunoController com rotas para:</li>
+            <ul>
+                <li>Criar um novo aluno.</li>
+                <li>Listar todos os alunos.</li>
+                <li>Atualizar um aluno pelo Id.</li>
+                <li>Deletar um aluno pelo Id.</li>
+            </ul>
+        </ul>
+
+        <h3>2.2 Frontend:</h3>
+        <p>
+            Crie uma interface usando HTML e CSS. Você pode optar por usar Angular ou Razor para a criação das
+            páginas.
+        </p>
+        <ul>
+            <li>
+                <h4>2.2.1 Formulário de Alunos</h4>
+                <p>
+                    Será usado tanto para cadastro quanto para edição. Se um ID for passado para ele, preencha os
+                    campos com as informações do aluno correspondente.
+                </p>
+                <ul>
+                    <li>Deve conter um formulário com os campos: Nome, Data de Nascimento, Curso.</li>
+                    <li>Um botão de "Salvar" que envia os dados para a API e salva no banco de dados.</li>
+                </ul>
+            </li>
+            <li>
+                <h4>2.2.2 Página de Listagem</h4>
+                <p>
+                    Liste todos os alunos cadastrados em uma tabela com as colunas: Id, Nome, Data de Nascimento,
+                    Curso.
+                </p>
+                <ul>
+                    <li>Ao lado de cada registro, forneça opções para "Editar" e "Deletar" o aluno.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>2.3 Banco de Dados e Modelo</h3>
+        <p>Utilize SQL Server como banco de dados.</p>
+    </section>
+
+    <section id="instrucoes" class="mt-5">
+        <h2>3. Instruções</h2>
+        <ul>
+            <li>
+                Utilize o projeto disponibilizado no link <a href="https://github.com/alosaulo/selecao-bolsista.git"
+                                                             target="_blank">https://github.com/alosaulo/selecao-bolsista.git</a>
+            </li>
+            <li>Utilize o script de criação de banco no projeto</li>
+            <li>Desenvolva o controlador AlunoController com as rotas especificadas.</li>
+            <li>Crie o frontend com o "Formulário de Alunos" e a página de listagem.</li>
+            <li>Certifique-se de que todas as operações do CRUD estejam funcionando corretamente.</li>
+            <li>Crie uma nova branch no git e envie o projeto</li>
+        </ul>
+    </section>
+
+    <section id="criterios" class="mt-5">
+        <h2>4. Critérios de Avaliação:</h2>
+        <ul>
+            <li>Funcionalidade: Todas as operações do CRUD devem estar funcionais.</li>
+            <li>Design: A interface, mesmo simples, deve ser limpa e intuitiva.</li>
+            <li>Organização do Código: O código deve ser bem estruturado e seguir boas práticas.</li>
+            <li>Interação com o Banco: O uso correto do Entity Framework Core com SQL Server será avaliado.</li>
+            <li>Feedback para o Usuário: O sistema deve fornecer feedbacks claros após cada operação.</li>
+        </ul>
+    </section>
+
+    <section id="observacoes" class="mt-5 mb-5">
+        <h2>5. Observações:</h2>
+        <p>A escolha de bibliotecas adicionais é livre. Justifique suas escolhas se perguntado.</p>
+        <p>Documentação, embora não seja obrigatória, é um diferencial.</p>
+        <p>A avaliação é focada em habilidades técnicas, solução de problemas e organização.</p>
+        <p>Boa sorte!</p>
+    </section>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/js/bootstrap.bundle.min.js"></script>

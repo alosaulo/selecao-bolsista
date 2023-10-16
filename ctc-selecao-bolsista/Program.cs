@@ -15,6 +15,15 @@ namespace ctc_selecao_bolsista
             builder.Services.AddDbContext<AppDbContext>(options =>
                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+            using (var context = new AppDbContext())
+            {
+
+                // Aplica as migrações
+                context.Database.Migrate();
+                // Realiza o Seed
+                DbContextSeed.SeedData(context);
+            }
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -32,14 +41,12 @@ namespace ctc_selecao_bolsista
 
             app.UseAuthorization();
 
-            app.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Aluno}/{action=Index}/{id?}");
+            app.MapControllers();
 
             app.Run();
             
             // Criar uma instância da classe Configuration
-            var configuration = new ConfigurationBuilder()
+            /*var configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json")
                 .Build();
@@ -50,15 +57,9 @@ namespace ctc_selecao_bolsista
             // Configurar e criar o DbContext
             var options = new DbContextOptionsBuilder<AppDbContext>()
                 .UseSqlServer(connectionString)
-                .Options;
+                .Options;*/
 
-            using (var context = new AppDbContext(options)) 
-            {
-                // Aplica as migrações
-                context.Database.Migrate();
-                // Realiza o Seed
-                DbContextSeed.SeedData(context);
-            }
+
 
         }
     }
