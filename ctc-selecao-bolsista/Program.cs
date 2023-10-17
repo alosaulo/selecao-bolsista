@@ -17,7 +17,6 @@ namespace ctc_selecao_bolsista
 
             using (var context = new AppDbContext())
             {
-
                 // Aplica as migrações
                 context.Database.Migrate();
                 // Realiza o Seed
@@ -45,22 +44,6 @@ namespace ctc_selecao_bolsista
 
             app.Run();
             
-            // Criar uma instância da classe Configuration
-            /*var configuration = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json")
-                .Build();
-
-            // Obter a string de conexão
-            var connectionString = configuration.GetConnectionString("DefaultConnection");
-
-            // Configurar e criar o DbContext
-            var options = new DbContextOptionsBuilder<AppDbContext>()
-                .UseSqlServer(connectionString)
-                .Options;*/
-
-
-
         }
     }
 }

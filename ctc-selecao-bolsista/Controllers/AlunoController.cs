@@ -30,7 +30,7 @@ namespace ctc_selecao_bolsista.Controllers
                 alunos = context.Alunos.ToList();
             }
 
-            return View();
+            return View(alunos);
         }
 
         [Route("Alunos/Formulario")]
@@ -40,21 +40,33 @@ namespace ctc_selecao_bolsista.Controllers
         }
 
         [Route("Alunos/Criar")]
-        public IActionResult CriarAluno() 
+        public IActionResult CriarAluno(Aluno aluno) 
         { 
+            
             return RedirectToAction("Index");
         }
 
         [Route("Alunos/Deletar/{id}")]
         public IActionResult DeletarAluno(int id)
         {
+            using (AppDbContext context = new AppDbContext()) 
+            {
+                Aluno aluno = context.Alunos.Find(id);
+                context.Remove(aluno);
+                context.SaveChanges();
+            }
             return RedirectToAction("Index");
         }
 
         [Route("Alunos/Atualizar/{id}")]
         public IActionResult AtualizarAluno(int id)
         {
-            return RedirectToAction("Index");
+            Aluno aluno = null;
+            using(AppDbContext context = new AppDbContext())
+            {
+                aluno = context.Alunos.Find(id);
+            }
+            return View("FormularioAluno", aluno);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

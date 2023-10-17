@@ -1,6 +1,46 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
+﻿@using ctc_selecao_bolsista.Data.Entity
+
+@model List<Aluno>
+
+@{
+    ViewData["Title"] = "Alunos";
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+
+<div class="container">
+    <h2>Tabela de Alunos</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Data de Nascimento</th>
+                <th>Curso</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Uma linha exemplo -->
+            @foreach (Aluno aluno in Model)
+            {
+                <tr>
+                    <td>@aluno.alunoId</td>
+                    <td>@aluno.Nome</td>
+                    <td>@aluno.DataNascimento.ToShortDateString()</td>
+                    <td>@aluno.Curso</td>
+                    <td>
+                        <a asp-controller="Aluno" asp-action="AtualizarAluno" asp-route-id='@aluno.alunoId' class="btn btn-primary">Atualizar</a>
+                        <a asp-controller="Aluno" asp-action="DeletarAluno" asp-route-id='@aluno.alunoId' class="btn btn-danger" onclick="confirm(' Você tem certeza que deseja deletar este aluno?');">Deletar</a>
+                    </td>
+                </tr>
+            }
+            <!-- Adicione mais linhas conforme necessário -->
+        </tbody>
+    </table>
+    <p>Total: @Model.Count alunos</p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
