@@ -35,7 +35,7 @@ Utilize SQL Server como banco de dados.
 - Desenvolva o controlador AlunoController com as rotas especificadas.
 - Crie o frontend com o "Formulário de Alunos" e a página de listagem.
 - Certifique-se de que todas as operações do CRUD estejam funcionando corretamente.
-- Enviar o projeto comprimido para o email: saulocaliman@ceet.secti.es.gov.br
+- Enviar o projeto comprimido, ou link de download, para o email: saulocaliman@ceet.secti.es.gov.br
 
 ## 4. Critérios de Avaliação:
 
