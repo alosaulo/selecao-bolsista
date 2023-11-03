@@ -25,12 +25,10 @@
         <p>Desenvolva uma aplicação web em .NET Core.</p>
         <ul>
             <li>Utilize Entity Framework Core como ORM para SQL Server.</li>
-            <li>Implemente um controlador AlunoController com rotas para:</li>
+            <li>Implemente os métodos do controlador AlunoController para:</li>
             <ul>
                 <li>Criar um novo aluno.</li>
-                <li>Listar todos os alunos.</li>
                 <li>Atualizar um aluno pelo Id.</li>
-                <li>Deletar um aluno pelo Id.</li>
             </ul>
         </ul>
 
@@ -48,17 +46,7 @@
                 </p>
                 <ul>
                     <li>Deve conter um formulário com os campos: Nome, Data de Nascimento, Curso.</li>
-                    <li>Um botão de "Salvar" que envia os dados para a API e salva no banco de dados.</li>
-                </ul>
-            </li>
-            <li>
-                <h4>2.2.2 Página de Listagem</h4>
-                <p>
-                    Liste todos os alunos cadastrados em uma tabela com as colunas: Id, Nome, Data de Nascimento,
-                    Curso.
-                </p>
-                <ul>
-                    <li>Ao lado de cada registro, forneça opções para "Editar" e "Deletar" o aluno.</li>
+                    <li>Um botão de "Salvar" que envia os dados para a API e salva no banco de dados, tanto para criação quanto para edição.</li>
                 </ul>
             </li>
         </ul>
@@ -74,11 +62,12 @@
                 Utilize o projeto disponibilizado no link <a href="https://github.com/alosaulo/selecao-bolsista.git"
                                                              target="_blank">https://github.com/alosaulo/selecao-bolsista.git</a>
             </li>
-            <li>Utilize o script de criação de banco no projeto</li>
+            <li>Utilize o comando em .net cli <b>dotnet ef database update</b>, ou em Package Manager Console <b>Update-Database</b>, para atualizar o banco de dados.</li>
             <li>Desenvolva o controlador AlunoController com as rotas especificadas.</li>
             <li>Crie o frontend com o "Formulário de Alunos" e a página de listagem.</li>
             <li>Certifique-se de que todas as operações do CRUD estejam funcionando corretamente.</li>
-            <li>Crie uma nova branch no git e envie o projeto</li>
+            <li>Enviar o projeto comprimido para o email: saulocaliman@ceet.secti.es.gov.br</li>
+
         </ul>
     </section>
 
@@ -86,7 +75,7 @@
         <h2>4. Critérios de Avaliação:</h2>
         <ul>
             <li>Funcionalidade: Todas as operações do CRUD devem estar funcionais.</li>
-            <li>Design: A interface, mesmo simples, deve ser limpa e intuitiva.</li>
+            <li>Design: A interface, mesmo simples, deve ser limpa e intuitiva. Modificar a interface padrão é um diferencial.</li>
             <li>Organização do Código: O código deve ser bem estruturado e seguir boas práticas.</li>
             <li>Interação com o Banco: O uso correto do Entity Framework Core com SQL Server será avaliado.</li>
             <li>Feedback para o Usuário: O sistema deve fornecer feedbacks claros após cada operação.</li>
@@ -96,7 +85,6 @@
     <section id="observacoes" class="mt-5 mb-5">
         <h2>5. Observações:</h2>
         <p>A escolha de bibliotecas adicionais é livre. Justifique suas escolhas se perguntado.</p>
-        <p>Documentação, embora não seja obrigatória, é um diferencial.</p>
         <p>A avaliação é focada em habilidades técnicas, solução de problemas e organização.</p>
         <p>Boa sorte!</p>
     </section>
